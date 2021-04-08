@@ -1,0 +1,11 @@
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\DulSoft.BML.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\DulSoft.BML.pdb
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\Dapper.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\DulSoft.DAL.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\DulSoft.DAL.pdb
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\bin\Debug\Dapper.xml
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\obj\Debug\DulSoft.BML.csprojAssemblyReference.cache
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\obj\Debug\DulSoft.BML.csproj.CoreCompileInputs.cache
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\obj\Debug\DulSoft.BML.csproj.CopyComplete
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\obj\Debug\DulSoft.BML.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.BML\obj\Debug\DulSoft.BML.pdb

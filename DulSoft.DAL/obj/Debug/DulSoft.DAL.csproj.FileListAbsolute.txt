@@ -1,0 +1,9 @@
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\bin\Debug\DulSoft.DAL.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\bin\Debug\DulSoft.DAL.pdb
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\bin\Debug\Dapper.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\bin\Debug\Dapper.xml
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\obj\Debug\DulSoft.DAL.csproj.CoreCompileInputs.cache
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\obj\Debug\DulSoft.DAL.csproj.CopyComplete
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\obj\Debug\DulSoft.DAL.dll
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\obj\Debug\DulSoft.DAL.pdb
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft.DAL\obj\Debug\DulSoft.DAL.csprojAssemblyReference.cache
