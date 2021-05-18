@@ -208,6 +208,10 @@ namespace DulSoft
             this.colidCliente.Caption = "ID";
             this.colidCliente.FieldName = "idCliente";
             this.colidCliente.Name = "colidCliente";
+            this.colidCliente.OptionsColumn.AllowEdit = false;
+            this.colidCliente.OptionsColumn.AllowFocus = false;
+            this.colidCliente.OptionsColumn.AllowIncrementalSearch = false;
+            this.colidCliente.OptionsColumn.AllowMove = false;
             this.colidCliente.Visible = true;
             this.colidCliente.VisibleIndex = 0;
             // 
@@ -216,6 +220,10 @@ namespace DulSoft
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowFocus = false;
+            this.colnombre.OptionsColumn.AllowIncrementalSearch = false;
+            this.colnombre.OptionsColumn.AllowMove = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -224,6 +232,10 @@ namespace DulSoft
             this.colrazonSocial.Caption = "Razón Social";
             this.colrazonSocial.FieldName = "razonSocial";
             this.colrazonSocial.Name = "colrazonSocial";
+            this.colrazonSocial.OptionsColumn.AllowEdit = false;
+            this.colrazonSocial.OptionsColumn.AllowFocus = false;
+            this.colrazonSocial.OptionsColumn.AllowIncrementalSearch = false;
+            this.colrazonSocial.OptionsColumn.AllowMove = false;
             this.colrazonSocial.Visible = true;
             this.colrazonSocial.VisibleIndex = 2;
             // 
@@ -232,6 +244,10 @@ namespace DulSoft
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.AllowEdit = false;
+            this.coltelefono.OptionsColumn.AllowFocus = false;
+            this.coltelefono.OptionsColumn.AllowIncrementalSearch = false;
+            this.coltelefono.OptionsColumn.AllowMove = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 3;
             // 
@@ -240,6 +256,10 @@ namespace DulSoft
             this.coldescuento.Caption = "Descuento";
             this.coldescuento.FieldName = "descuento";
             this.coldescuento.Name = "coldescuento";
+            this.coldescuento.OptionsColumn.AllowEdit = false;
+            this.coldescuento.OptionsColumn.AllowFocus = false;
+            this.coldescuento.OptionsColumn.AllowIncrementalSearch = false;
+            this.coldescuento.OptionsColumn.AllowMove = false;
             this.coldescuento.Visible = true;
             this.coldescuento.VisibleIndex = 4;
             // 
@@ -247,6 +267,10 @@ namespace DulSoft
             // 
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
             // 
             // frmClientes
             // 

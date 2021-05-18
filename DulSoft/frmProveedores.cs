@@ -37,20 +37,29 @@ namespace DulSoft
 
         private void btnModificar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("idProveedor"))
+            if (gvProveedores.GetFocusedRowCellValue("idProveedores") != null)
             {
-                Text = "Modificar Producto"
-            }.ShowDialog();
-            proveedorBindingSource.DataSource = new Proveedor().GetAll();
-            gvProveedores.BestFitColumns();
+                new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("idProveedor"))
+                {
+                    Text = "Modificar Proveedor (" + (int)gvProveedores.GetFocusedRowCellValue("idProveedor") + ")"
+                }.ShowDialog();
+                proveedorBindingSource.DataSource = new Proveedor().GetAll();
+                gvProveedores.BestFitColumns();
+            }
+            else
+            {
+                XtraMessageBox.Show("No se seleccionó un proveedor a modificar", "Ponkosmetic's",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvProveedores.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el proveedor? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el proveedor? \n\n" +
                     "{0}", gvProveedores.GetFocusedRowCellValue("nombre")),
-                    "DulSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                    "Ponkosmetic's", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {
 
@@ -58,11 +67,11 @@ namespace DulSoft
                     {
                         idProveedor = (int)gvProveedores.GetFocusedRowCellValue("idProveedor")
                     }.Delete() > 0)
-                        XtraMessageBox.Show("Proveedor eliminado correctamente", "DulSoft",
+                        XtraMessageBox.Show("Proveedor eliminado correctamente", "Ponkosmetic's",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el proveedor. \nVerifique con el deparamento de TI",
-                            "DulSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el proveedor. \nVerifique con el deparamento de TI",
+                            "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     proveedorBindingSource.DataSource = new Proveedor().GetAll();
                     gvProveedores.BestFitColumns();
                 }

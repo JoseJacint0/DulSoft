@@ -212,6 +212,10 @@ namespace DulSoft
             this.colidEmpleado.Caption = "ID";
             this.colidEmpleado.FieldName = "idEmpleado";
             this.colidEmpleado.Name = "colidEmpleado";
+            this.colidEmpleado.OptionsColumn.AllowEdit = false;
+            this.colidEmpleado.OptionsColumn.AllowFocus = false;
+            this.colidEmpleado.OptionsColumn.AllowIncrementalSearch = false;
+            this.colidEmpleado.OptionsColumn.AllowMove = false;
             this.colidEmpleado.Visible = true;
             this.colidEmpleado.VisibleIndex = 0;
             // 
@@ -220,6 +224,10 @@ namespace DulSoft
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowFocus = false;
+            this.colnombre.OptionsColumn.AllowIncrementalSearch = false;
+            this.colnombre.OptionsColumn.AllowMove = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -228,6 +236,10 @@ namespace DulSoft
             this.colapellido.Caption = "Apellido";
             this.colapellido.FieldName = "apellido";
             this.colapellido.Name = "colapellido";
+            this.colapellido.OptionsColumn.AllowEdit = false;
+            this.colapellido.OptionsColumn.AllowFocus = false;
+            this.colapellido.OptionsColumn.AllowIncrementalSearch = false;
+            this.colapellido.OptionsColumn.AllowMove = false;
             this.colapellido.Visible = true;
             this.colapellido.VisibleIndex = 2;
             // 
@@ -236,6 +248,10 @@ namespace DulSoft
             this.coledad.Caption = "Edad";
             this.coledad.FieldName = "edad";
             this.coledad.Name = "coledad";
+            this.coledad.OptionsColumn.AllowEdit = false;
+            this.coledad.OptionsColumn.AllowFocus = false;
+            this.coledad.OptionsColumn.AllowIncrementalSearch = false;
+            this.coledad.OptionsColumn.AllowMove = false;
             this.coledad.Visible = true;
             this.coledad.VisibleIndex = 3;
             // 
@@ -244,6 +260,10 @@ namespace DulSoft
             this.colsueldo.Caption = "Sueldo";
             this.colsueldo.FieldName = "sueldo";
             this.colsueldo.Name = "colsueldo";
+            this.colsueldo.OptionsColumn.AllowEdit = false;
+            this.colsueldo.OptionsColumn.AllowFocus = false;
+            this.colsueldo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colsueldo.OptionsColumn.AllowMove = false;
             this.colsueldo.Visible = true;
             this.colsueldo.VisibleIndex = 4;
             // 
@@ -252,6 +272,10 @@ namespace DulSoft
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.AllowEdit = false;
+            this.coltelefono.OptionsColumn.AllowFocus = false;
+            this.coltelefono.OptionsColumn.AllowIncrementalSearch = false;
+            this.coltelefono.OptionsColumn.AllowMove = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 5;
             // 
@@ -260,6 +284,10 @@ namespace DulSoft
             this.coldomicilio.Caption = "Domicilio";
             this.coldomicilio.FieldName = "domicilio";
             this.coldomicilio.Name = "coldomicilio";
+            this.coldomicilio.OptionsColumn.AllowEdit = false;
+            this.coldomicilio.OptionsColumn.AllowFocus = false;
+            this.coldomicilio.OptionsColumn.AllowIncrementalSearch = false;
+            this.coldomicilio.OptionsColumn.AllowMove = false;
             this.coldomicilio.Visible = true;
             this.coldomicilio.VisibleIndex = 6;
             // 
@@ -267,6 +295,10 @@ namespace DulSoft
             // 
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
             // 
             // frmEmpleados
             // 

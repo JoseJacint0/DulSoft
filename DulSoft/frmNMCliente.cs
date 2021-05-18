@@ -39,7 +39,7 @@ namespace DulSoft
 
         private void frmNMCliente_Load(object sender, EventArgs e)
         {
-
+            Misc.actualiza = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -56,16 +56,17 @@ namespace DulSoft
                         descuento = Convert.ToDecimal(txtDescuento.Text)
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Cliente insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Cliente insertado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la inserción", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
                 else
                 {
@@ -75,16 +76,17 @@ namespace DulSoft
                     cliente.descuento = Convert.ToDecimal(txtDescuento.Text);
                     if (cliente.Update() > 0)
                     {
-                        XtraMessageBox.Show("Cliente modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Cliente modificado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la modificación", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
             }
 
@@ -95,7 +97,7 @@ namespace DulSoft
             var ban = false;
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
-                txtNombre.ErrorText = "Ingresa el nombre";
+                txtNombre.ErrorText = "Ingresa un nombre";
                 txtNombre.Focus();
                 ban = true;
             }
@@ -134,6 +136,58 @@ namespace DulSoft
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtRazonS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
         }
     }
 }

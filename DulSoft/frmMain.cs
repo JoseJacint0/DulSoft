@@ -90,12 +90,51 @@ namespace DulSoft
         private void btnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (XtraMessageBox.Show(string.Format("¿Esta seguro de cerrar? \n\n"),
-                     "DulSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+            if (XtraMessageBox.Show(string.Format("¿Está seguro de cerrar? \n\n"),
+                     "Ponkosmetic's", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                      DialogResult.Yes)
             {
                 this.Close();
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmFormasPago))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando Formas de Pago ...");
+            new frmFormasPago() { MdiParent = this }.Show();
+            SplashScreenManager.CloseDefaultWaitForm();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tabMdiManager.MdiParent == null)
+                tabMdiManager.MdiParent = this;
+
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType() == typeof(frmVentas))
+                {
+                    form.Activate();
+                    return;
+                }
+
+            SplashScreenManager.ShowDefaultWaitForm("Por favor espere", "Cargando Ventas ...");
+            new frmVentas() { MdiParent = this }.Show();
+            SplashScreenManager.CloseDefaultWaitForm();
         }
     }
 }

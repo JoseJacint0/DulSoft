@@ -34,13 +34,18 @@ namespace DulSoft
                     password = txtContraseña.Text
                 }.Login() != null)
                 {
-                    XtraMessageBox.Show("Acceso correcto");
+                    Misc.actualiza = true;
+                    XtraMessageBox.Show("Acceso correcto", "Ponkosmetic's",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
                     //mostrar main
                 }
                 else
                 {
-                    XtraMessageBox.Show("Error en las credenciales");
+                    XtraMessageBox.Show("Error en las credenciales", "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsuario.EditValue = null;
+                    txtContraseña.EditValue = null;
+                    txtUsuario.Focus();
                 }
             }
         }
@@ -50,7 +55,7 @@ namespace DulSoft
             var ban = false;
             if (string.IsNullOrEmpty(txtUsuario.Text))
             {
-                txtUsuario.ErrorText = "Ingresa el usuario";
+                txtUsuario.ErrorText = "Ingresa un usuario";
                 txtUsuario.Focus();
                 ban = true;
             }
@@ -70,6 +75,17 @@ namespace DulSoft
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", "Ponkosmetic's",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

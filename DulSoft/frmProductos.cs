@@ -42,20 +42,29 @@ namespace DulSoft
 
         private void btnModificar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("idProducto"))
+            if (gvProductos.GetFocusedRowCellValue("idProducto") != null)
             {
-                Text = "Modificar Producto"
-            }.ShowDialog();
-            productoBindingSource.DataSource = new Producto().GetAll();
-            gvProductos.BestFitColumns();
+                new frmNMProducto((int)gvProductos.GetFocusedRowCellValue("idProducto"))
+                {
+                    Text = "Modificar Producto (" + (int)gvProductos.GetFocusedRowCellValue("idProducto") + ")"
+                }.ShowDialog();
+                productoBindingSource.DataSource = new Producto().GetAll();
+                gvProductos.BestFitColumns();
+            }
+            else
+            {
+                XtraMessageBox.Show("No se seleccionó un producto a modificar", "Ponkosmetic's",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvProductos.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el producto? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el producto? \n\n" +
                     "{0}", gvProductos.GetFocusedRowCellValue("descripcion")),
-                    "DulSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                    "Ponkosmetic's", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {
 
@@ -63,11 +72,11 @@ namespace DulSoft
                     {
                         idProducto = (int)gvProductos.GetFocusedRowCellValue("idProducto")
                     }.Delete() > 0)
-                        XtraMessageBox.Show("Producto eliminado correctamente", "DulSoft",
+                        XtraMessageBox.Show("Producto eliminado correctamente", "Ponkosmetic's",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el producto. \nVerifique con el deparamento de TI",
-                            "DulSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el producto. \nVerifique con el deparamento de TI",
+                            "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     productoBindingSource.DataSource = new Producto().GetAll();
                     gvProductos.BestFitColumns();
                 }

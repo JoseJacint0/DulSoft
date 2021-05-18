@@ -37,20 +37,29 @@ namespace DulSoft
 
         private void btnModificar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMCliente((int)gvClientes.GetFocusedRowCellValue("idCliente"))
+            if (gvClientes.GetFocusedRowCellValue("idCliente") != null)
             {
-                Text = "Modificar Cliente"
-            }.ShowDialog();
-            clienteBindingSource.DataSource = new Cliente().GetAll();
-            gvClientes.BestFitColumns();
+                new frmNMCliente((int)gvClientes.GetFocusedRowCellValue("idCliente"))
+                {
+                    Text = "Modificar Cliente (" + (int)gvClientes.GetFocusedRowCellValue("idCliente") + ")"
+                }.ShowDialog();
+                clienteBindingSource.DataSource = new Cliente().GetAll();
+                gvClientes.BestFitColumns();
+            }
+            else
+            {
+                XtraMessageBox.Show("No se seleccionó un cliente a modificar", "Ponkosmetic's",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
         }
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvClientes.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el cliente? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el cliente? \n\n" +
                     "{0}", gvClientes.GetFocusedRowCellValue("nombre")),
-                    "DulSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                    "Ponkosmetic's", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {
 
@@ -58,14 +67,17 @@ namespace DulSoft
                     {
                         idCliente = (int)gvClientes.GetFocusedRowCellValue("idCliente")
                     }.Delete() > 0)
-                        XtraMessageBox.Show("Cliente eliminado correctamente", "DulSoft",
+                        XtraMessageBox.Show("Cliente eliminado correctamente", "Ponkosmetic's",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el cliente. \nVerifique con el deparamento de TI",
-                            "DulSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el cliente. \nVerifique con el deparamento de TI",
+                            "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     clienteBindingSource.DataSource = new Cliente().GetAll();
                     gvClientes.BestFitColumns();
                 }
+            else
+                    XtraMessageBox.Show("No se seleccionó un cliente para eliminar",
+                    "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

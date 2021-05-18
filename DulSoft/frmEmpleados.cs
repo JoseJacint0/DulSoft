@@ -37,20 +37,29 @@ namespace DulSoft
 
         private void btnModificar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            new frmNMEmpleado((int)gvEmpleados.GetFocusedRowCellValue("idEmpleado"))
+            if (gvEmpleados.GetFocusedRowCellValue("idEmpleado") != null)
             {
-                Text = "Modificar Empleado"
-            }.ShowDialog();
-            empleadoBindingSource.DataSource = new Empleado().GetAll();
-            gvEmpleados.BestFitColumns();
+                new frmNMEmpleado((int)gvEmpleados.GetFocusedRowCellValue("idEmpleado"))
+                {
+                    Text = "Modificar Empleado (" + (int)gvEmpleados.GetFocusedRowCellValue("idEmpleado") + ")"
+                }.ShowDialog();
+                empleadoBindingSource.DataSource = new Empleado().GetAll();
+                gvEmpleados.BestFitColumns();
+            }
+            else
+            {
+                XtraMessageBox.Show("No se seleccionó un empleado a modificar", "Ponkosmetic's",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvEmpleados.FocusedRowHandle >= 0)
-                if (XtraMessageBox.Show(string.Format("¿Esta seguro de eliminar el empleado? \n\n" +
+                if (XtraMessageBox.Show(string.Format("¿Está seguro de eliminar el empleado? \n\n" +
                     "{0}", gvEmpleados.GetFocusedRowCellValue("nombre")),
-                    "DulSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                    "Ponkosmetic's", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                     DialogResult.Yes)
                 {
 
@@ -58,11 +67,11 @@ namespace DulSoft
                     {
                         idEmpleado = (int)gvEmpleados.GetFocusedRowCellValue("idEmpleado")
                     }.Delete() > 0)
-                        XtraMessageBox.Show("Empleado eliminado correctamente", "DulSoft",
+                        XtraMessageBox.Show("Empleado eliminado correctamente", "Ponkosmetic's",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        XtraMessageBox.Show("Ocurrio un error al eliminar el empleado. \nVerifique con el deparamento de TI",
-                            "DulSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        XtraMessageBox.Show("Ocurrió un error al eliminar el empleado. \nVerifique con el deparamento de TI",
+                            "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     empleadoBindingSource.DataSource = new Empleado().GetAll();
                     gvEmpleados.BestFitColumns();
                 }

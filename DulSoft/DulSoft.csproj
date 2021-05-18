@@ -69,6 +69,12 @@
     <Compile Include="frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFormasPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormasPago.Designer.cs">
+      <DependentUpon>frmFormasPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="frmNMEmpleado.Designer.cs">
       <DependentUpon>frmNMEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNMFPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNMFPago.Designer.cs">
+      <DependentUpon>frmNMFPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNMProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,18 @@
     </Compile>
     <Compile Include="frmNMProveedor.Designer.cs">
       <DependentUpon>frmNMProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNVenta.Designer.cs">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.cs">
+      <DependentUpon>frmPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
@@ -117,6 +141,12 @@
     <Compile Include="frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmClientes.resx">
@@ -124,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormasPago.resx">
+      <DependentUpon>frmFormasPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -137,17 +170,29 @@
     <EmbeddedResource Include="frmNMEmpleado.resx">
       <DependentUpon>frmNMEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNMFPago.resx">
+      <DependentUpon>frmNMFPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNMProducto.resx">
       <DependentUpon>frmNMProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNMProveedor.resx">
       <DependentUpon>frmNMProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNVenta.resx">
+      <DependentUpon>frmNVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -163,8 +208,10 @@
     <None Include="App.config" />
     <None Include="Properties\DataSources\DulSoft.BML.Cliente.datasource" />
     <None Include="Properties\DataSources\DulSoft.BML.Empleado.datasource" />
+    <None Include="Properties\DataSources\DulSoft.BML.FormaPago.datasource" />
     <None Include="Properties\DataSources\DulSoft.BML.Producto.datasource" />
     <None Include="Properties\DataSources\DulSoft.BML.Proveedor.datasource" />
+    <None Include="Properties\DataSources\DulSoft.BML.Venta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

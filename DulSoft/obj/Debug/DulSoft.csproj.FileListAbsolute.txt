@@ -108,3 +108,8 @@ D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmNMProducto.resources
 D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmNMProveedor.resources
 D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmProveedores.resources
 D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmLogin.resources
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmFormasPago.resources
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmNMFPago.resources
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmPagos.resources
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmVentas.resources
+D:\PORYECTOS TOPICOS\DulSoft\DulSoft\obj\Debug\DulSoft.frmNVenta.resources

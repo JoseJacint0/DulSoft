@@ -75,13 +75,13 @@ namespace DulSoft
                         telefono = txtTelefono.Text,
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Proveedor insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Proveedor insertado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la inserción", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
                         this.Close();
                     }
@@ -92,13 +92,13 @@ namespace DulSoft
                     proveedor.telefono = txtTelefono.Text;
                     if (proveedor.Update() > 0)
                     {
-                        XtraMessageBox.Show("Proveedor modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Proveedor modificado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la modificación", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }

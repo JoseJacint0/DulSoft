@@ -135,6 +135,8 @@ namespace DulSoft
             // 
             this.txtMarca.Location = new System.Drawing.Point(89, 167);
             this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtMarca.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMarca.Size = new System.Drawing.Size(165, 20);
             this.txtMarca.TabIndex = 6;
             // 
@@ -142,6 +144,8 @@ namespace DulSoft
             // 
             this.txtStock.Location = new System.Drawing.Point(89, 141);
             this.txtStock.Name = "txtStock";
+            this.txtStock.Properties.Mask.EditMask = "n0";
+            this.txtStock.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtStock.Size = new System.Drawing.Size(165, 20);
             this.txtStock.TabIndex = 5;
             // 
@@ -149,6 +153,8 @@ namespace DulSoft
             // 
             this.txtPrecio.Location = new System.Drawing.Point(89, 115);
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Properties.Mask.EditMask = "c";
+            this.txtPrecio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPrecio.Size = new System.Drawing.Size(165, 20);
             this.txtPrecio.TabIndex = 4;
             // 
@@ -156,6 +162,8 @@ namespace DulSoft
             // 
             this.txtCodigo.Location = new System.Drawing.Point(89, 89);
             this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.Mask.EditMask = "n0";
+            this.txtCodigo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCodigo.Size = new System.Drawing.Size(165, 20);
             this.txtCodigo.TabIndex = 3;
             // 
@@ -163,6 +171,8 @@ namespace DulSoft
             // 
             this.txtUnidadM.Location = new System.Drawing.Point(89, 63);
             this.txtUnidadM.Name = "txtUnidadM";
+            this.txtUnidadM.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtUnidadM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtUnidadM.Size = new System.Drawing.Size(165, 20);
             this.txtUnidadM.TabIndex = 2;
             // 
@@ -170,6 +180,8 @@ namespace DulSoft
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(89, 37);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtDescripcion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDescripcion.Size = new System.Drawing.Size(165, 20);
             this.txtDescripcion.TabIndex = 1;
             // 

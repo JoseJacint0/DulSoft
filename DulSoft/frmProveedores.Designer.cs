@@ -204,6 +204,10 @@ namespace DulSoft
             this.colidProveedor.Caption = "ID";
             this.colidProveedor.FieldName = "idProveedor";
             this.colidProveedor.Name = "colidProveedor";
+            this.colidProveedor.OptionsColumn.AllowEdit = false;
+            this.colidProveedor.OptionsColumn.AllowFocus = false;
+            this.colidProveedor.OptionsColumn.AllowIncrementalSearch = false;
+            this.colidProveedor.OptionsColumn.AllowMove = false;
             this.colidProveedor.Visible = true;
             this.colidProveedor.VisibleIndex = 0;
             // 
@@ -212,6 +216,10 @@ namespace DulSoft
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.AllowFocus = false;
+            this.colnombre.OptionsColumn.AllowIncrementalSearch = false;
+            this.colnombre.OptionsColumn.AllowMove = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             // 
@@ -220,6 +228,10 @@ namespace DulSoft
             this.coltelefono.Caption = "Teléfono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.AllowEdit = false;
+            this.coltelefono.OptionsColumn.AllowFocus = false;
+            this.coltelefono.OptionsColumn.AllowIncrementalSearch = false;
+            this.coltelefono.OptionsColumn.AllowMove = false;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 2;
             // 
@@ -227,6 +239,10 @@ namespace DulSoft
             // 
             this.colactivo.FieldName = "activo";
             this.colactivo.Name = "colactivo";
+            this.colactivo.OptionsColumn.AllowEdit = false;
+            this.colactivo.OptionsColumn.AllowFocus = false;
+            this.colactivo.OptionsColumn.AllowIncrementalSearch = false;
+            this.colactivo.OptionsColumn.AllowMove = false;
             // 
             // frmProveedores
             // 

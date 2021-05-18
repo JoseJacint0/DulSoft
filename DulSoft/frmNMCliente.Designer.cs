@@ -113,29 +113,41 @@ namespace DulSoft
             // 
             this.txtDescuento.Location = new System.Drawing.Point(79, 119);
             this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Properties.Mask.EditMask = "d";
+            this.txtDescuento.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDescuento.Size = new System.Drawing.Size(167, 20);
             this.txtDescuento.TabIndex = 4;
+            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
             // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(79, 93);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\) )?\\d{1,3}-\\d\\d\\d-\\d\\d-\\d\\d";
+            this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTelefono.Size = new System.Drawing.Size(167, 20);
             this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtRazonS
             // 
             this.txtRazonS.Location = new System.Drawing.Point(79, 67);
             this.txtRazonS.Name = "txtRazonS";
+            this.txtRazonS.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtRazonS.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtRazonS.Size = new System.Drawing.Size(167, 20);
             this.txtRazonS.TabIndex = 2;
+            this.txtRazonS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonS_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(79, 41);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtNombre.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNombre.Size = new System.Drawing.Size(167, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtID
             // 

@@ -20,6 +20,7 @@ namespace DulSoft
             Application.SetCompatibleTextRenderingDefault(false);
             if (new frmLogin().ShowDialog() == DialogResult.OK)
                 Application.Run(new frmMain());
+            //Application.Run(new frmNMCliente());
         }
     }
 }

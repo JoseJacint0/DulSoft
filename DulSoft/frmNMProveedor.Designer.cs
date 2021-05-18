@@ -91,6 +91,8 @@ namespace DulSoft
             // 
             this.txtTelefono.Location = new System.Drawing.Point(70, 68);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.Mask.EditMask = "(\\(\\d\\d\\d\\) )?\\d{1,3}-\\d\\d\\d-\\d\\d-\\d\\d";
+            this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTelefono.Size = new System.Drawing.Size(137, 20);
             this.txtTelefono.TabIndex = 2;
             // 
@@ -98,6 +100,8 @@ namespace DulSoft
             // 
             this.txtNombre.Location = new System.Drawing.Point(70, 42);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtNombre.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNombre.Size = new System.Drawing.Size(137, 20);
             this.txtNombre.TabIndex = 1;
             // 

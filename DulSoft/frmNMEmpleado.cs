@@ -59,13 +59,13 @@ namespace DulSoft
                         domicilio = txtDomicilio.Text
                     }.Add() > 0)
                     {
-                        XtraMessageBox.Show("Empleado insertado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Empleado insertado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la inserción", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la inserción", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
                         this.Close();
                     }
@@ -80,13 +80,13 @@ namespace DulSoft
                     empleado.domicilio = txtDomicilio.Text;
                     if (empleado.Update() > 0)
                     {
-                        XtraMessageBox.Show("Empleado modificado correctamente", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Empleado modificado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        XtraMessageBox.Show("Ocurrio un error en la modificación", Application.ProductName, MessageBoxButtons.OK,
+                        XtraMessageBox.Show("Ocurrió un error en la modificación", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -99,7 +99,7 @@ namespace DulSoft
             var ban = false;
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
-                txtNombre.ErrorText = "Ingresa el nombre";
+                txtNombre.ErrorText = "Ingresa un nombre";
                 txtNombre.Focus();
                 ban = true;
             }
