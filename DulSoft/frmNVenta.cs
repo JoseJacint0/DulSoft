@@ -23,7 +23,18 @@ namespace DulSoft
 
         private void frmNVenta_Load(object sender, EventArgs e)
         {
+            //Misc.actualiza = true;
             clienteBindingSource.DataSource = new Cliente().GetAll();
+        }
+
+        private void lupClientes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

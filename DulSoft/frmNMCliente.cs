@@ -33,7 +33,7 @@ namespace DulSoft
             txtNombre.Text = cliente.nombre;
             txtRazonS.Text = cliente.razonSocial;
             txtTelefono.Text = cliente.telefono;
-            txtDescuento.Text = cliente.descuento.ToString();
+            txtDescuento.EditValue = cliente.descuento.ToString();
 
         }
 
@@ -53,7 +53,7 @@ namespace DulSoft
                         nombre = txtNombre.Text,
                         razonSocial = txtRazonS.Text,
                         telefono = txtTelefono.Text,
-                        descuento = Convert.ToDecimal(txtDescuento.Text)
+                        descuento = Convert.ToDecimal(txtDescuento.EditValue)
                     }.Add() > 0)
                     {
                         XtraMessageBox.Show("Cliente insertado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
@@ -73,7 +73,7 @@ namespace DulSoft
                     cliente.nombre = txtNombre.Text;
                     cliente.razonSocial = txtRazonS.Text;
                     cliente.telefono = txtTelefono.Text;
-                    cliente.descuento = Convert.ToDecimal(txtDescuento.Text);
+                    cliente.descuento = Convert.ToDecimal(txtDescuento.EditValue);
                     if (cliente.Update() > 0)
                     {
                         XtraMessageBox.Show("Cliente modificado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
@@ -188,6 +188,17 @@ namespace DulSoft
                 btnCancelar_Click(null, null);
             }
             Misc.actualiza = false;
+        }
+
+        private void frmNMCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", "Ponkosmetic's",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

@@ -83,6 +83,7 @@ namespace DulSoft
             this.txtDomicilio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDomicilio.Size = new System.Drawing.Size(165, 20);
             this.txtDomicilio.TabIndex = 6;
+            this.txtDomicilio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDomicilio_KeyPress);
             // 
             // lblDomicilio
             // 
@@ -100,6 +101,7 @@ namespace DulSoft
             this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTelefono.Size = new System.Drawing.Size(165, 20);
             this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblTelefono
             // 
@@ -117,6 +119,7 @@ namespace DulSoft
             this.txtSueldo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSueldo.Size = new System.Drawing.Size(165, 20);
             this.txtSueldo.TabIndex = 4;
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
             // 
             // lblSueldo
             // 
@@ -130,10 +133,11 @@ namespace DulSoft
             // 
             this.txtEdad.Location = new System.Drawing.Point(79, 83);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Properties.Mask.EditMask = "\\d+";
-            this.txtEdad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEdad.Properties.Mask.EditMask = "##";
+            this.txtEdad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtEdad.Size = new System.Drawing.Size(165, 20);
             this.txtEdad.TabIndex = 3;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // lblEdad
             // 
@@ -147,10 +151,11 @@ namespace DulSoft
             // 
             this.txtApellido.Location = new System.Drawing.Point(79, 57);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtApellido.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtApellido.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtApellido.Size = new System.Drawing.Size(165, 20);
             this.txtApellido.TabIndex = 2;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // lblApellido
             // 
@@ -164,10 +169,11 @@ namespace DulSoft
             // 
             this.txtNombre.Location = new System.Drawing.Point(79, 31);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtNombre.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtNombre.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNombre.Size = new System.Drawing.Size(165, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblNombre
             // 
@@ -223,6 +229,7 @@ namespace DulSoft
             this.Name = "frmNMEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMEmpleado";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMEmpleado_FormClosing);
             this.Load += new System.EventHandler(this.frmNMEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDomicilio.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();

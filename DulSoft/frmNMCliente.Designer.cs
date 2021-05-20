@@ -113,7 +113,7 @@ namespace DulSoft
             // 
             this.txtDescuento.Location = new System.Drawing.Point(79, 119);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Properties.Mask.EditMask = "d";
+            this.txtDescuento.Properties.Mask.EditMask = "p2";
             this.txtDescuento.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDescuento.Size = new System.Drawing.Size(167, 20);
             this.txtDescuento.TabIndex = 4;
@@ -133,7 +133,7 @@ namespace DulSoft
             // 
             this.txtRazonS.Location = new System.Drawing.Point(79, 67);
             this.txtRazonS.Name = "txtRazonS";
-            this.txtRazonS.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtRazonS.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtRazonS.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtRazonS.Size = new System.Drawing.Size(167, 20);
             this.txtRazonS.TabIndex = 2;
@@ -143,7 +143,7 @@ namespace DulSoft
             // 
             this.txtNombre.Location = new System.Drawing.Point(79, 41);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtNombre.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtNombre.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNombre.Size = new System.Drawing.Size(167, 20);
             this.txtNombre.TabIndex = 1;
@@ -183,6 +183,7 @@ namespace DulSoft
             this.Name = "frmNMCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMCliente_FormClosing);
             this.Load += new System.EventHandler(this.frmNMCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();

@@ -38,6 +38,7 @@ namespace DulSoft
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.lblCambio = new DevExpress.XtraEditors.LabelControl();
             this.lupClientes = new DevExpress.XtraEditors.LookUpEdit();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblCliente = new DevExpress.XtraEditors.LabelControl();
             this.gControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -51,18 +52,17 @@ namespace DulSoft
             this.lblTotal = new DevExpress.XtraEditors.LabelControl();
             this.lblDescuento = new DevExpress.XtraEditors.LabelControl();
             this.lblSubTotal = new DevExpress.XtraEditors.LabelControl();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gcVentaDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvVentaDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl2)).BeginInit();
             this.gControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupClientes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl1)).BeginInit();
             this.gControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gcVentaDetalle
@@ -120,6 +120,7 @@ namespace DulSoft
             this.txtCodigo.Properties.Appearance.Options.UseFont = true;
             this.txtCodigo.Size = new System.Drawing.Size(195, 40);
             this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblCambio
             // 
@@ -152,6 +153,11 @@ namespace DulSoft
             this.lupClientes.Properties.ValueMember = "idCliente";
             this.lupClientes.Size = new System.Drawing.Size(195, 20);
             this.lupClientes.TabIndex = 1;
+            this.lupClientes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lupClientes_KeyPress);
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataSource = typeof(DulSoft.BML.Cliente);
             // 
             // lblCliente
             // 
@@ -299,10 +305,6 @@ namespace DulSoft
             this.lblSubTotal.TabIndex = 4;
             this.lblSubTotal.Text = "Sub Total:";
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataSource = typeof(DulSoft.BML.Cliente);
-            // 
             // frmNVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,13 +328,13 @@ namespace DulSoft
             this.gControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lupClientes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gControl1)).EndInit();
             this.gControl1.ResumeLayout(false);
             this.gControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

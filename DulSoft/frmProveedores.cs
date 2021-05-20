@@ -37,7 +37,7 @@ namespace DulSoft
 
         private void btnModificar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gvProveedores.GetFocusedRowCellValue("idProveedores") != null)
+            if (gvProveedores.GetFocusedRowCellValue("idProveedor") != null)
             {
                 new frmNMProveedor((int)gvProveedores.GetFocusedRowCellValue("idProveedor"))
                 {

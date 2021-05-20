@@ -69,6 +69,7 @@ namespace DulSoft
             this.txtDescripcion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDescripcion.Size = new System.Drawing.Size(167, 20);
             this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // lblDescripcion
             // 
@@ -112,7 +113,9 @@ namespace DulSoft
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNMFPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMFPago";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMFPago_FormClosing);
             this.Load += new System.EventHandler(this.frmNMFPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();

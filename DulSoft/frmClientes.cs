@@ -75,9 +75,9 @@ namespace DulSoft
                     clienteBindingSource.DataSource = new Cliente().GetAll();
                     gvClientes.BestFitColumns();
                 }
-            else
-                    XtraMessageBox.Show("No se seleccionó un cliente para eliminar",
-                    "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //else
+                //    XtraMessageBox.Show("No se seleccionó un cliente para eliminar",
+                //    "Ponkosmetic's", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnActualizar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

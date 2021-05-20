@@ -40,7 +40,7 @@ namespace DulSoft
 
         private void frmNMProducto_Load(object sender, EventArgs e)
         {
-
+            Misc.actualiza = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -61,14 +61,15 @@ namespace DulSoft
                     {
                         XtraMessageBox.Show("Producto insertado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
                         XtraMessageBox.Show("Ocurrió un error en la inserción", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
                 else
                 {
@@ -82,14 +83,15 @@ namespace DulSoft
                     {
                         XtraMessageBox.Show("Producto modificado correctamente", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = true;
                     }
                     else
                     {
                         XtraMessageBox.Show("Ocurrió un error en la modificación", "Ponkosmetic's", MessageBoxButtons.OK,
                            MessageBoxIcon.Information);
-                        this.Close();
+                        Misc.actualiza = false;
                     }
+                    this.Close();
                 }
             }
         }
@@ -155,6 +157,95 @@ namespace DulSoft
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtUnidadM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void txtMarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnGuardar_Click(null, null);
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Escape))
+            {
+                btnCancelar_Click(null, null);
+            }
+            Misc.actualiza = false;
+        }
+
+        private void frmNMProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Misc.actualiza == false)
+                if (XtraMessageBox.Show("¿Deseas cerrar esta pantalla?", "Ponkosmetic's",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
         }
     }
 }

@@ -135,10 +135,11 @@ namespace DulSoft
             // 
             this.txtMarca.Location = new System.Drawing.Point(89, 167);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtMarca.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtMarca.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtMarca.Size = new System.Drawing.Size(165, 20);
             this.txtMarca.TabIndex = 6;
+            this.txtMarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMarca_KeyPress);
             // 
             // txtStock
             // 
@@ -148,6 +149,7 @@ namespace DulSoft
             this.txtStock.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtStock.Size = new System.Drawing.Size(165, 20);
             this.txtStock.TabIndex = 5;
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // txtPrecio
             // 
@@ -157,33 +159,37 @@ namespace DulSoft
             this.txtPrecio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPrecio.Size = new System.Drawing.Size(165, 20);
             this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(89, 89);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Properties.Mask.EditMask = "n0";
+            this.txtCodigo.Properties.Mask.EditMask = "d";
             this.txtCodigo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCodigo.Size = new System.Drawing.Size(165, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtUnidadM
             // 
             this.txtUnidadM.Location = new System.Drawing.Point(89, 63);
             this.txtUnidadM.Name = "txtUnidadM";
-            this.txtUnidadM.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtUnidadM.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtUnidadM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtUnidadM.Size = new System.Drawing.Size(165, 20);
             this.txtUnidadM.TabIndex = 2;
+            this.txtUnidadM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnidadM_KeyPress);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(89, 37);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Properties.Mask.EditMask = "([z-zA-Z] ?)+";
+            this.txtDescripcion.Properties.Mask.EditMask = "([A-Z] ?)+";
             this.txtDescripcion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDescripcion.Size = new System.Drawing.Size(165, 20);
             this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtID
             // 
@@ -223,6 +229,7 @@ namespace DulSoft
             this.Name = "frmNMProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMProducto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMProducto_FormClosing);
             this.Load += new System.EventHandler(this.frmNMProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMarca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStock.Properties)).EndInit();

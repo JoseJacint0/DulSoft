@@ -188,7 +188,7 @@ namespace DulSoft
             // colidFPAgo
             // 
             this.colidFPAgo.Caption = "ID";
-            this.colidFPAgo.FieldName = "idFPAgo";
+            this.colidFPAgo.FieldName = "idFPago";
             this.colidFPAgo.Name = "colidFPAgo";
             this.colidFPAgo.OptionsColumn.AllowEdit = false;
             this.colidFPAgo.OptionsColumn.AllowFocus = false;

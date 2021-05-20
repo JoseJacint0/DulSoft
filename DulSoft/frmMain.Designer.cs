@@ -37,9 +37,11 @@ namespace DulSoft
             this.mnCatalogos = new DevExpress.XtraBars.BarSubItem();
             this.btnClientes = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmpleados = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFormasPago = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductos = new DevExpress.XtraBars.BarButtonItem();
             this.btnProveedores = new DevExpress.XtraBars.BarButtonItem();
+            this.mnVentas = new DevExpress.XtraBars.BarSubItem();
+            this.btnAdministrar = new DevExpress.XtraBars.BarButtonItem();
             this.mnApariencia = new DevExpress.XtraBars.SkinBarSubItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -47,8 +49,6 @@ namespace DulSoft
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tabMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -72,9 +72,9 @@ namespace DulSoft
             this.btnProductos,
             this.btnProveedores,
             this.mnApariencia,
-            this.barButtonItem1,
-            this.barSubItem1,
-            this.barButtonItem2});
+            this.btnFormasPago,
+            this.mnVentas,
+            this.btnAdministrar});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 11;
             this.barManager1.StatusBar = this.bar3;
@@ -88,7 +88,7 @@ namespace DulSoft
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.mnArchivo),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnCatalogos),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnVentas),
             new DevExpress.XtraBars.LinkPersistInfo(this.mnApariencia)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
@@ -118,7 +118,7 @@ namespace DulSoft
             this.mnCatalogos.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClientes),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEmpleados),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFormasPago),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProductos),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnProveedores)});
             this.mnCatalogos.Name = "mnCatalogos";
@@ -137,12 +137,12 @@ namespace DulSoft
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmpleados_ItemClick);
             // 
-            // barButtonItem1
+            // btnFormasPago
             // 
-            this.barButtonItem1.Caption = "Formas Pago";
-            this.barButtonItem1.Id = 8;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnFormasPago.Caption = "Formas Pago";
+            this.btnFormasPago.Id = 8;
+            this.btnFormasPago.Name = "btnFormasPago";
+            this.btnFormasPago.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFormasPago_ItemClick);
             // 
             // btnProductos
             // 
@@ -157,6 +157,21 @@ namespace DulSoft
             this.btnProveedores.Id = 6;
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProveedores_ItemClick);
+            // 
+            // mnVentas
+            // 
+            this.mnVentas.Caption = "Ventas";
+            this.mnVentas.Id = 9;
+            this.mnVentas.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdministrar)});
+            this.mnVentas.Name = "mnVentas";
+            // 
+            // btnAdministrar
+            // 
+            this.btnAdministrar.Caption = "Administrar";
+            this.btnAdministrar.Id = 10;
+            this.btnAdministrar.Name = "btnAdministrar";
+            this.btnAdministrar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdministrar_ItemClick);
             // 
             // mnApariencia
             // 
@@ -212,21 +227,6 @@ namespace DulSoft
             // 
             this.tabMdiManager.MdiParent = this;
             // 
-            // barSubItem1
-            // 
-            this.barSubItem1.Caption = "Ventas";
-            this.barSubItem1.Id = 9;
-            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
-            this.barSubItem1.Name = "barSubItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Administrar";
-            this.barButtonItem2.Id = 10;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +243,7 @@ namespace DulSoft
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ponkosmetic\'s";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMdiManager)).EndInit();
@@ -269,8 +270,8 @@ namespace DulSoft
         private DevExpress.XtraBars.BarButtonItem btnProveedores;
         private DevExpress.XtraBars.SkinBarSubItem mnApariencia;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager tabMdiManager;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnFormasPago;
+        private DevExpress.XtraBars.BarSubItem mnVentas;
+        private DevExpress.XtraBars.BarButtonItem btnAdministrar;
     }
 }

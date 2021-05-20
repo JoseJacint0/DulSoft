@@ -95,6 +95,7 @@ namespace DulSoft
             this.txtTelefono.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtTelefono.Size = new System.Drawing.Size(137, 20);
             this.txtTelefono.TabIndex = 2;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
@@ -104,6 +105,7 @@ namespace DulSoft
             this.txtNombre.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtNombre.Size = new System.Drawing.Size(137, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtID
             // 
@@ -135,6 +137,7 @@ namespace DulSoft
             this.Name = "frmNMProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNMProveedor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNMProveedor_FormClosing);
             this.Load += new System.EventHandler(this.frmNMProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();

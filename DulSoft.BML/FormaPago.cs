@@ -29,7 +29,7 @@ namespace DulSoft.BML
         public int Delete()
         {
             var parametros = new DynamicParameters();
-            parametros.Add("idFPAgo", idFPago);
+            parametros.Add("idFPago", idFPago);
             return dataAccess.Execute("stp_formaspago_delete", parametros);
         }
 

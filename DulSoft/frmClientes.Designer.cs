@@ -254,6 +254,8 @@ namespace DulSoft
             // coldescuento
             // 
             this.coldescuento.Caption = "Descuento";
+            this.coldescuento.DisplayFormat.FormatString = "p";
+            this.coldescuento.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.coldescuento.FieldName = "descuento";
             this.coldescuento.Name = "coldescuento";
             this.coldescuento.OptionsColumn.AllowEdit = false;
